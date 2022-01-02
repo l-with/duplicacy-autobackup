@@ -34,7 +34,7 @@ do_backup() {
     return
   fi
 
-  duplicacy backup $DUPLICACY_BACKUP_OPTIONS
+  duplicacy -log backup $DUPLICACY_BACKUP_OPTIONS
 
   if [[ -f $POST_BACKUP_SCRIPT ]]; then
     echo "Running post-backup script"
